@@ -10,7 +10,8 @@ Im Standard Spiel sind die Bodenwinkel auf 8 begrenzt. Dies sieht teils sehr uns
 3) die beigefügte "fieldGround.xml" in map-Ordner kopieren
 
 4) i3D mit Texteditor bearbeiten
-a) Pfad für terrainShader.xml anpassen
+
+a) Pfad für "terrainShader.xml" anpassen
 ```xml
 <File fileId="2" filename="terrainShader.xml"/>
 ```
@@ -59,11 +60,11 @@ d) unter Group „SprayType“ den Startkanal korrigieren
 ```xml
 <Group name="Spraytype" firstChannel="9" numChannels="3" >
 ```
-5) in der map.xml den Pfad zur fieldGround.xml anpassen (**Achtung:** Pfad kann abweichen)
+5) in der "map.xml" den Pfad zur fieldGround.xml anpassen (**Achtung:** Pfad kann abweichen)
 ```xml
 <fieldGround filename="maps/fieldGround.xml" />
 ```
-8) Map im Giants Editor laden, Log auf Fehler prüfen. WEnn erfolgreich (keine Fehler) wieder abspeichern. Dann hat man eine neue densityMap_ground.gdm und die PNG im "maps/data" kann gelöscht werden.
+8) Map im Giants Editor laden, Log auf Fehler prüfen. Wenn erfolgreich (keine Fehler) wieder abspeichern. Dann hat man eine neue "densityMap_ground.gdm" und die PNG im "maps/data" kann gelöscht werden.
 
 Link Artikel Giants Forum:
 https://forum.giants-software.com/viewtopic.php?f=884&t=182812
