@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<fieldGround>
+<densityMaps>
+<groundTypes useDefaultTerrainDetail="true" firstChannel="0" numChannels="4">
+<stubbleTillage value="1" tireTrackColor="0.123 0.074 0.044 1"/>
+<cultivated value="2" tireTrackColor="0.123 0.074 0.044 1"/>
+<seedbed value="3" tireTrackColor="0.123 0.074 0.044 1"/>
+<plowed value="4" tireTrackColor="0.123 0.074 0.044 1"/>
+<rolledSeedbed value="5" tireTrackColor="0.123 0.074 0.044 1"/>
+<sown value="6" tireTrackColor="0.123 0.074 0.044 1"/>
+<directSown value="7" tireTrackColor="0.123 0.074 0.044 1"/>
+<planted value="8" tireTrackColor="0.123 0.074 0.044 1"/>
+<ridge value="9" tireTrackColor="0.123 0.074 0.044 1"/>
+<rollerLines value="10" tireTrackColor="0.123 0.074 0.044 1"/>
+<harvestReady value="11" tireTrackColor="0.123 0.074 0.044 1"/>
+<harvestReadyOther value="12" tireTrackColor="0.123 0.074 0.044 1"/>
+<grass value="13" tireTrackColor="0.123 0.074 0.044 1"/>
+<grassCut value="14" tireTrackColor="0.123 0.074 0.044 1"/>
+
+<ranges>
+<sowable firstValue="1" lastValue="5" />
+<sowing firstValue="6" lastValue="9" />
+</ranges>
+</groundTypes>
+
+<groundAngle useDefaultTerrainDetail="true" firstChannel="4" numChannels="5" />
+
+<sprayTypes useDefaultTerrainDetail="true" firstChannel="9" numChannels="3">
+<fertilizer value="1" tireTrackColor="0.123 0.074 0.044 1"/>
+<manure value="2" tireTrackColor="0.123 0.074 0.044 1"/>
+<liquidManure value="3" tireTrackColor="0.123 0.074 0.044 1"/>
+<lime value="4" tireTrackColor="0.123 0.074 0.044 1"/>
+</sprayTypes>
+
+<sprayLevel filename="$data/maps/mapUS/data/infoLayer_sprayLevel.png" firstChannel="0" numChannels="2" maxValue="2"/>
+<limeLevel filename="$data/maps/mapUS/data/infoLayer_limeLevel.png" firstChannel="0" numChannels="2" />
+<plowLevel filename="$data/maps/mapUS/data/infoLayer_plowLevel.png" firstChannel="0" numChannels="1" />
+<stubbleShredLevel filename="$data/maps/mapUS/data/infoLayer_stubbleShredLevel.png" firstChannel="0" numChannels="1" />
+<rollerLevel filename="$data/maps/mapUS/data/infoLayer_rollerLevel.png" firstChannel="0" numChannels="1" />
+</densityMaps>
+</fieldGround>
