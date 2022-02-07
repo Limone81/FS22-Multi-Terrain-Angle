@@ -9,9 +9,9 @@ Gestartet wird mit einer entpackten (**kein zip**) Karte. Es darf sich auch kein
 
 1) "maps/data/densityMap_ground.gdm" mit GRLE-Konverter (Download unter https://gdn.giants-software.com/downloads.php) in PNG konvertieren, Original aus dem Map-Ordner löschen. (**Achtung:** Pfad kann abweichen)
 
-2) die beigefügte "terrainShader.xml" in map-Ordner kopieren
+2) die beigefügte "terrainShader.xml" in maps-Ordner kopieren
 
-3) die beigefügte "fieldGround.xml" in map-Ordner kopieren
+3) die beigefügte "fieldGround.xml" in maps-Ordner kopieren
 
 4) i3D mit Texteditor bearbeiten
 
@@ -89,9 +89,9 @@ Starting with an unzipped (**no zip**) map. Be sure that no zipped version of th
 
 1) converting "maps/data/densityMap_ground.gdm" with GRLE-converter (you can get this from https://gdn.giants-software.com/downloads.php) into PNG, original from map folder should be deleted. (**Attention:** path could vary depending on your folder structure)
 
-2) copy attached "terrainShader.xml" into your map folder
+2) copy attached "terrainShader.xml" into your maps folder
 
-3) copy attached "fieldGround.xml" into your map folder
+3) copy attached "fieldGround.xml" into your maps folder
 
 4) editing map.i3D with text editor like notepad++ or anything else
 
