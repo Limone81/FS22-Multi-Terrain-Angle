@@ -21,7 +21,7 @@ a) Pfad für "terrainShader.xml" anpassen
 ```
 b) unter dem DetailLayer „terrainDetail“ die Zahlen für die Kanäle anpassen. Hier werden 2 hinzugefügt, ergibt dann 32 Winkel.
 ```xml
-<DetailLayer name="terrainDetail" densityMapId="242" numDensityMapChannels="12" compressionChannels="12" cellSize="8" objectMask="16711935" decalLayer="1" viewDistance="75" blendOutDistance="5" densityMapShaderNames="blendMap;blendMap2" combinedValuesChannels="0 4 0;4 5 0;9 3 0">
+... numDensityMapChannels="12" compressionChannels="12" ... combinedValuesChannels="0 4 0;4 5 0;9 3 0">
 ```
 c) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufügen. Diese müssen für für die Anzahl der Winkel ausgerechnet werden. Hier 180/32=5.625
 
@@ -58,7 +58,7 @@ c) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufü
 <Option value="29" name="-163.125 Degrees"/>
 <Option value="30" name="-168.75 Degrees"/>
 <Option value="31" name="-174.375 Degrees"/>
-</GrouP>
+</Group>
 ```
 d) unter Group „SprayType“ den Startkanal korrigieren
 ```xml
@@ -101,7 +101,7 @@ a) edit path of "terrainShader.xml"
 ```
 b) search in detaillayer section for „terrainDetail“ and vary the numbers for the channels. There were 2 added, so in total it should be 32.
 ```xml
-<DetailLayer name="terrainDetail" densityMapId="242" numDensityMapChannels="12" compressionChannels="12" cellSize="8" objectMask="16711935" decalLayer="1" viewDistance="75" blendOutDistance="5" densityMapShaderNames="blendMap;blendMap2" combinedValuesChannels="0 4 0;4 5 0;9 3 0">
+... numDensityMapChannels="12" compressionChannels="12" ... combinedValuesChannels="0 4 0;4 5 0;9 3 0">
 ```
 c) in section „GroundAngle“ edit the quantity of channels and angles. These should be calculated for 32 angles, here 180/32=5.625
 
@@ -138,7 +138,7 @@ c) in section „GroundAngle“ edit the quantity of channels and angles. These 
 <Option value="29" name="-163.125 Degrees"/>
 <Option value="30" name="-168.75 Degrees"/>
 <Option value="31" name="-174.375 Degrees"/>
-</GrouP>
+</Group>
 ```
 d) in section „SprayType“ correct the starting channel
 ```xml
