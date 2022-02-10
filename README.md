@@ -25,6 +25,7 @@ suche folgenden Eintrag
 <File fileId="2" filename="terrainShader.xml"/>
 ```
 b) unter dem DetailLayer „terrainDetail“ die Zahlen für die Kanäle anpassen. Hier werden 2 hinzugefügt, ergibt dann 32 Winkel.
+
 suche folgenden Eintrag
 ```xml
 <DetailLayer name="terrainDetail" densityMapId="256" numDensityMapChannels="10" compressionChannels="10" cellSize="8" objectMask="16711935" decalLayer="1" viewDistance="75" blendOutDistance="5" densityMapShaderNames="blendMap;blendMap2" combinedValuesChannels="0 4 0;4 3 0;7 3 0">
@@ -116,6 +117,7 @@ change it to
 <File fileId="2" filename="terrainShader.xml"/>
 ```
 b) search in detaillayer section for „terrainDetail“ and vary the numbers for the channels. There were 2 added, so in total it should be 32.
+
 search for
 ```xml
 <DetailLayer name="terrainDetail" densityMapId="256" numDensityMapChannels="10" compressionChannels="10" cellSize="8" objectMask="16711935" decalLayer="1" viewDistance="75" blendOutDistance="5" densityMapShaderNames="blendMap;blendMap2" combinedValuesChannels="0 4 0;4 3 0;7 3 0">
@@ -180,3 +182,6 @@ https://forbidden-mods.de/forum/thread/12289-tut-multi-terrain-angle-mehr-bodenw
 
 This is just another summary of the instructions and adaptation on Modmaps. If you change files from the main directory and/or from the $data, backups must always be created beforehand! No liability is assumed for broken game installations and/or savegames!
 
+**works fine on Calmsden ;)**
+
+![fsScreen_2022_02_06_13_27_53](https://user-images.githubusercontent.com/63619149/153474911-c57e7b7d-bf21-42ca-a1a7-ea0b62d5e7f2.png)
