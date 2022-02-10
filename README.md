@@ -16,6 +16,7 @@ Gestartet wird mit einer entpackten (**kein zip**) Karte. Es darf sich auch kein
 4) i3D mit Texteditor bearbeiten
 
 a) Pfad für **"terrainShader.xml"** anpassen
+
 suche folgenden Eintrag
 ```xml
 <File fileId="2" filename="$data/shaders/terrainShader.xml"/>
