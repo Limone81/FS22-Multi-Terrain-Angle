@@ -7,24 +7,35 @@ Im Standard Spiel sind die Bodenwinkel auf 8 begrenzt. Dies sieht teils sehr uns
 
 Gestartet wird mit einer entpackten (**kein zip**) Karte. Es darf sich auch keine gepackte Version im selben Verzeichnis befinden, da der Editor sonst diese lädt!
 
-1) "maps/data/densityMap_ground.gdm" mit GRLE-Konverter (Download unter https://gdn.giants-software.com/downloads.php) in PNG konvertieren, Original aus dem Map-Ordner löschen. (**Achtung:** Pfad kann abweichen)
+1) **"maps/data/densityMap_ground.gdm"** mit GRLE-Konverter (Download unter https://gdn.giants-software.com/downloads.php) in PNG konvertieren, Original aus dem Map-Ordner löschen. (**Achtung:** Pfad kann abweichen)
 
-2) die beigefügte "terrainShader.xml" in maps-Ordner kopieren
+2) die beigefügte **"terrainShader.xml"** in maps-Ordner kopieren
 
-3) die beigefügte "fieldGround.xml" in maps-Ordner kopieren
+3) die beigefügte **"fieldGround.xml"** in maps-Ordner kopieren
 
 4) i3D mit Texteditor bearbeiten
 
-a) Pfad für "terrainShader.xml" anpassen
+a) Pfad für **"terrainShader.xml"** anpassen
+suche folgenden Eintrag
+```xml
+<File fileId="2" filename="$data/shaders/terrainShader.xml"/>
+```
+ändern zu 
 ```xml
 <File fileId="2" filename="terrainShader.xml"/>
 ```
 b) unter dem DetailLayer „terrainDetail“ die Zahlen für die Kanäle anpassen. Hier werden 2 hinzugefügt, ergibt dann 32 Winkel.
+suche folgenden Eintrag
+```xml
+<DetailLayer name="terrainDetail" densityMapId="256" numDensityMapChannels="10" compressionChannels="10" cellSize="8" objectMask="16711935" decalLayer="1" viewDistance="75" blendOutDistance="5" densityMapShaderNames="blendMap;blendMap2" combinedValuesChannels="0 4 0;4 3 0;7 3 0">
+```
+ändere folgende Einträge
 ```xml
 ... numDensityMapChannels="12" compressionChannels="12" ... combinedValuesChannels="0 4 0;4 5 0;9 3 0">
 ```
 c) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufügen. Diese müssen für für die Anzahl der Winkel ausgerechnet werden. Hier 180/32=5.625
 
+ersetze die kompletten Einträge mit folgendem Codeblock
 ```xml
 <Group name="GroundAngle" firstChannel="4" numChannels="5" >
 <Option value="1" name="-5.625 Degrees"/>
@@ -60,11 +71,11 @@ c) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufü
 <Option value="31" name="-174.375 Degrees"/>
 </Group>
 ```
-d) unter Group „SprayType“ den firstChannel korrigieren
+d) unter Group **„SprayType“** den firstChannel korrigieren
 ```xml
 <Group name="Spraytype" firstChannel="9" numChannels="3" >
 ```
-5) in der "map.xml" den Pfad zur fieldGround.xml anpassen (**Achtung:** Pfad kann abweichen)
+5) in der **"map.xml"** den Pfad zur fieldGround.xml anpassen (**Achtung:** Pfad kann abweichen)
 ```xml
 <fieldGround filename="maps/fieldGround.xml" />
 ```
@@ -87,24 +98,35 @@ In the basegame the groungangles are limited to 8. This often looks not very nic
 
 Starting with an unzipped (**no zip**) map. Be sure that no zipped version of the map is located in the same folder, because editor will load this one!
 
-1) converting "maps/data/densityMap_ground.gdm" with GRLE-converter (you can get this from https://gdn.giants-software.com/downloads.php) into PNG, original from map folder should be deleted. (**Attention:** path could vary depending on your folder structure)
+1) converting **"maps/data/densityMap_ground.gdm"** with GRLE-converter (you can get this from https://gdn.giants-software.com/downloads.php) into PNG, original from map folder should be deleted. (**Attention:** path could vary depending on your folder structure)
 
-2) copy attached "terrainShader.xml" into your maps folder
+2) copy attached **"terrainShader.xml"** into your maps folder
 
-3) copy attached "fieldGround.xml" into your maps folder
+3) copy attached **"fieldGround.xml"** into your maps folder
 
 4) editing map.i3D with text editor like notepad++ or anything else
 
-a) edit path of "terrainShader.xml" 
+a) edit path of **"terrainShader.xml"**
+search for following entry
+```xml
+<File fileId="2" filename="$data/shaders/terrainShader.xml"/>
+```
+change it to
 ```xml
 <File fileId="2" filename="terrainShader.xml"/>
 ```
 b) search in detaillayer section for „terrainDetail“ and vary the numbers for the channels. There were 2 added, so in total it should be 32.
+search for
+```xml
+<DetailLayer name="terrainDetail" densityMapId="256" numDensityMapChannels="10" compressionChannels="10" cellSize="8" objectMask="16711935" decalLayer="1" viewDistance="75" blendOutDistance="5" densityMapShaderNames="blendMap;blendMap2" combinedValuesChannels="0 4 0;4 3 0;7 3 0">
+```
+change this values
 ```xml
 ... numDensityMapChannels="12" compressionChannels="12" ... combinedValuesChannels="0 4 0;4 5 0;9 3 0">
 ```
 c) in section „GroundAngle“ edit the quantity of channels and angles. These should be calculated for 32 angles, here 180/32=5.625
 
+replace the complete entry with given codeblock
 ```xml
 <Group name="GroundAngle" firstChannel="4" numChannels="5" >
 <Option value="1" name="-5.625 Degrees"/>
@@ -140,11 +162,11 @@ c) in section „GroundAngle“ edit the quantity of channels and angles. These 
 <Option value="31" name="-174.375 Degrees"/>
 </Group>
 ```
-d) in section „SprayType“ correct firstChannel
+d) in section **„SprayType“** correct firstChannel
 ```xml
 <Group name="Spraytype" firstChannel="9" numChannels="3" >
 ```
-5) editing the path in "map.xml" to "fieldGround.xml" (**Attention:** path could vary depending on your folder structure)
+5) editing the path in **"map.xml"** to "fieldGround.xml" (**Attention:** path could vary depending on your folder structure)
 ```xml
 <fieldGround filename="maps/fieldGround.xml" />
 ```
