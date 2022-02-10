@@ -60,7 +60,7 @@ c) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufü
 <Option value="31" name="-174.375 Degrees"/>
 </Group>
 ```
-d) unter Group „SprayType“ den Startkanal korrigieren
+d) unter Group „SprayType“ den firstChannel korrigieren
 ```xml
 <Group name="Spraytype" firstChannel="9" numChannels="3" >
 ```
@@ -83,7 +83,7 @@ _______________________________________________________________________
 # FS22-Multi-Terrain-Angle
 Guideline for integration of 32 groundangles to Modmaps (Englisch)
 
-In the basegame the groungangles are limited to 8. this often looks not very nice, so i will help you to change them and make the game much more prettier. All given information is based on several forum threads, from Giants- and FBM forum and they are linked at the end.
+In the basegame the groungangles are limited to 8. This often looks not very nice, so i will help you to change them and make the game much more prettier. All given information is based on several forum threads, from Giants- and FBM forum and they are linked at the end.
 
 Starting with an unzipped (**no zip**) map. Be sure that no zipped version of the map is located in the same folder, because editor will load this one!
 
@@ -140,7 +140,7 @@ c) in section „GroundAngle“ edit the quantity of channels and angles. These 
 <Option value="31" name="-174.375 Degrees"/>
 </Group>
 ```
-d) in section „SprayType“ correct the starting channel
+d) in section „SprayType“ correct firstChannel
 ```xml
 <Group name="Spraytype" firstChannel="9" numChannels="3" >
 ```
