@@ -108,6 +108,7 @@ Starting with an unzipped (**no zip**) map. Be sure that no zipped version of th
 4) editing map.i3D with text editor like notepad++ or anything else
 
 a) edit path of **"terrainShader.xml"**
+
 search for following entry
 ```xml
 <File fileId="2" filename="$data/shaders/terrainShader.xml"/>
