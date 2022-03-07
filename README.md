@@ -81,7 +81,19 @@ d) unter Group **„SprayType“** den firstChannel korrigieren
 ```xml
 <fieldGround filename="maps/fieldGround.xml" />
 ```
-8) Map im Giants Editor laden, Log auf Fehler prüfen. Wenn erfolgreich (keine Fehler) wieder abspeichern. Dann hat man eine neue "densityMap_ground.gdm" und die PNG im "maps/data" kann gelöscht werden.
+6) **optional!** Anpassung der **"fieldGround.xml"**
+
+Wenn die map eigene InfoLayer für Düngung, Kalk, Steine, Unkraut etc. verwendet muss man die Pfade in der **"fieldGround.xml"** anpassen, da die beigefügte Datei die Standard-Werte der US Karte verwendet. Dazu in folgendem Codeblock die entsprechenden Pfade anpassen und auf die eigenen Dateien verlinken.
+```
+<sprayLevel filename="$data/maps/mapUS/data/infoLayer_sprayLevel.png" firstChannel="0" numChannels="2" maxValue="2"/>
+<limeLevel filename="$data/maps/mapUS/data/infoLayer_limeLevel.png" firstChannel="0" numChannels="2" />
+<plowLevel filename="$data/maps/mapUS/data/infoLayer_plowLevel.png" firstChannel="0" numChannels="1" />
+<stubbleShredLevel filename="$data/maps/mapUS/data/infoLayer_stubbleShredLevel.png" firstChannel="0" numChannels="1" />
+<rollerLevel filename="$data/maps/mapUS/data/infoLayer_rollerLevel.png" firstChannel="0" numChannels="1" />
+```
+hier dann jeweils den Pfad `$data/maps/mapUS/data/...` anpassen
+
+7) Map im Giants Editor laden, Log auf Fehler prüfen. Wenn erfolgreich (keine Fehler) wieder abspeichern. Dann hat man eine neue "densityMap_ground.gdm" und die PNG im "maps/data" kann gelöscht werden.
 
 Link Artikel Giants Forum:
 https://forum.giants-software.com/viewtopic.php?f=884&t=182812
@@ -174,7 +186,19 @@ d) in section **„SprayType“** correct firstChannel
 ```xml
 <fieldGround filename="maps/fieldGround.xml" />
 ```
-8) loading map into Giants Editor, check log for failures. If succesfull (no failure entries in log) save the map.i3d. Now you got a new "densityMap_ground.gdm" and the PNG in "maps/data" could be deleted.
+6) **optional!** editing the **"fieldGround.xml"**
+
+If your map has its own infolayers for spray, lime, stones etc. you'll have to change the paths in **"fieldGround.xml"**, because the attached fieldGround.xml uses the standard infolayers from US map. You have to edit the paths and link to your own files. You have to edit following codeblock in the **"fieldGround.xml"**.
+```
+<sprayLevel filename="$data/maps/mapUS/data/infoLayer_sprayLevel.png" firstChannel="0" numChannels="2" maxValue="2"/>
+<limeLevel filename="$data/maps/mapUS/data/infoLayer_limeLevel.png" firstChannel="0" numChannels="2" />
+<plowLevel filename="$data/maps/mapUS/data/infoLayer_plowLevel.png" firstChannel="0" numChannels="1" />
+<stubbleShredLevel filename="$data/maps/mapUS/data/infoLayer_stubbleShredLevel.png" firstChannel="0" numChannels="1" />
+<rollerLevel filename="$data/maps/mapUS/data/infoLayer_rollerLevel.png" firstChannel="0" numChannels="1" />
+```
+change the paths `$data/maps/mapUS/data/...` to your file-address
+
+7) loading map into Giants Editor, check log for failures. If succesfull (no failure entries in log) save the map.i3d. Now you got a new "densityMap_ground.gdm" and the PNG in "maps/data" could be deleted.
 
 Link thread Giants forum:
 https://forum.giants-software.com/viewtopic.php?f=884&t=182812
