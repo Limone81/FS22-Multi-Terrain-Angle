@@ -95,6 +95,21 @@ hier dann jeweils den Pfad `$data/maps/mapUS/data/...` anpassen
 
 7) Map im Giants Editor laden, Log auf Fehler prüfen. Wenn erfolgreich (keine Fehler) wieder abspeichern. Dann hat man eine neue "densityMap_ground.gdm" und die PNG im "maps/data" kann gelöscht werden.
 
+8) Wenn der Giants Editor beim Öffnen der map.i3d crasht muss der Name der **densityMap_ground.gdm** von xxx.gdm zu xxx.png innerhalb der **map.i3d** geändert werden!
+
+original (**fileId und Pfad kann abweichen**)
+```
+<File fileId="331" filename="data/densityMap_ground.gdm"/>
+```
+ändern zu 
+```
+<File fileId="331" filename="data/densityMap_ground.png"/>
+```
+
+Dann map.i3d erneut öffnen, dieses Mal ohne Crash und wenn ohne Fehler, map abspeichern.
+
+9) Wenn Punkt 8 notwendig war, diesen wieder rückgängig machen und die Pfadangabe innerhalb der **map.i3d** wieder von xxx.png zu xxx.gdm ändern.
+
 Link Artikel Giants Forum:
 https://forum.giants-software.com/viewtopic.php?f=884&t=182812
 
@@ -199,6 +214,22 @@ If your map has its own infolayers for spray, lime, stones etc. you'll have to c
 change the paths `$data/maps/mapUS/data/...` to your file-address
 
 7) loading map into Giants Editor, check log for failures. If succesfull (no failure entries in log) save the map.i3d. Now you got a new "densityMap_ground.gdm" and the PNG in "maps/data" could be deleted.
+
+
+8) If Giants Editor crashes by opening map.i3d, the name of **densityMap_ground.gdm** have to be changed from xxx.gdm to xxx.png inside **map.i3d**!
+
+original (**fileId and path could vary**)
+```
+<File fileId="331" filename="data/densityMap_ground.gdm"/>
+```
+change to 
+```
+<File fileId="331" filename="data/densityMap_ground.png"/>
+```
+
+Then open map.i3d again, hopefully this time without crash and save it when there are no errors.
+
+9) If point 8) was necessary, this have to be reversed inside **map.i3d** and ending from **densityMap_ground** have to be renamed from xxx.png to xxx.gdm
 
 Link thread Giants forum:
 https://forum.giants-software.com/viewtopic.php?f=884&t=182812
