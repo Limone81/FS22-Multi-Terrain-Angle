@@ -108,6 +108,8 @@ original (**fileId und Pfad kann abweichen**)
 
 Dann map.i3d erneut öffnen, dieses Mal ohne Crash und wenn ohne Fehler, map abspeichern.
 
+**Wenn es dann immer noch zum Crash kommt, prüfe ob sich die entpackte und die gezippte map nicht auf der selben Ordner-Ebene auf deiner Festplatte befinden, da immer die gezippte präferiert wird. Schiebe dann die gezippte map auf eine andere Ebene!**
+
 9) Wenn Punkt 8 notwendig war, diesen wieder rückgängig machen und die Pfadangabe innerhalb der **map.i3d** wieder von xxx.png zu xxx.gdm ändern.
 
 Link Artikel Giants Forum:
@@ -228,6 +230,8 @@ change to
 ```
 
 Then open map.i3d again, hopefully this time without crash and save it when there are no errors.
+
+**If the map also crashes, be sure that unzipped and zipped map are not located at the same level on your hard disk. If this is true, paste the zipped one to another level because the zipped map is always preferd by the giants editor**
 
 9) If point 8) was necessary, this have to be reversed inside **map.i3d** and ending from **densityMap_ground** have to be renamed from xxx.png to xxx.gdm
 
