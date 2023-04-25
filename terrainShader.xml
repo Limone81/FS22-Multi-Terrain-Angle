@@ -159,6 +159,7 @@ float2 getPatchCoords(VS_INPUT In, ObjectParameters& object)
         uint levelDelta = deltas.w;
         pos.x = float(((int)pos.x >> levelDelta) << levelDelta);
     }
+    pos *= instanceData.w;
     return pos + instanceData.xy;
 }
 ]]>
@@ -218,9 +219,10 @@ float2 getPatchCoords(VS_INPUT In, ObjectParameters& object)
 		usampler2D terrainDetailMap;
 		sampler2D noiseMap;
 
-#ifdef SHOW_TERRAIN_INFO_LAYER
+#if defined(SHOW_TERRAIN_INFO_LAYER) || defined(SHOW_TERRAIN_PROCEDURAL_LAYER)
         sampler2D infoLayerMap;
 #endif
+
         sampler2D lodNormalMap;
         samplerBuffer layerParameters;
 
@@ -787,6 +789,11 @@ void getBlendedColorAndNormal(inout FS_INPUT In, ObjectParameters& object,
             float3 infoColor = tex2D(infoLayerMap, globals.infoUV);
             oColor.xyz = lerp(oColor.xyz, infoColor, 0.7);
 #endif
+#ifdef SHOW_TERRAIN_PROCEDURAL_LAYER
+            float3 proceduralColor = tex2DSample(infoLayerMap, standardMaterialSampler, globals.infoUV);
+            oColor.xyz = lerp(oColor.xyz, proceduralColor, 0.3);
+#endif
+
 #if defined(DEBUG_INFO_TERRAIN_SLOPES)
             float3 up = float3(0,1,0);
             float3 faceNormal = getTerrainNormal(In, object);
