@@ -9,23 +9,15 @@ Gestartet wird mit einer entpackten (**kein zip**) Karte. Es darf sich auch kein
 
 1) **"maps/data/densityMap_ground.gdm"** mit GRLE-Konverter (Download unter https://gdn.giants-software.com/downloads.php) in PNG konvertieren, Original aus dem Map-Ordner löschen. (**Achtung:** Pfad kann abweichen)
 
-2) die beigefügte **"terrainShader.xml"** in maps-Ordner kopieren
+~~2) die beigefügte **"terrainShader.xml"** in maps-Ordner kopieren~~
+
+Schritt 2 ist seit Patch 1.13.1 nicht mehr notwendig
 
 3) die beigefügte **"fieldGround.xml"** in maps-Ordner kopieren
 
 4) i3D mit Texteditor bearbeiten
 
-a) Pfad für **"terrainShader.xml"** anpassen
-
-suche folgenden Eintrag
-```xml
-<File fileId="2" filename="$data/shaders/terrainShader.xml"/>
-```
-ändern zu 
-```xml
-<File fileId="2" filename="terrainShader.xml"/>
-```
-b) unter dem DetailLayer „terrainDetail“ die Zahlen für die Kanäle anpassen. Hier werden 2 hinzugefügt, ergibt dann 32 Winkel.
+a) unter dem DetailLayer „terrainDetail“ die Zahlen für die Kanäle anpassen. Hier werden 2 hinzugefügt, ergibt dann 32 Winkel.
 
 suche folgenden Eintrag
 ```xml
@@ -35,7 +27,7 @@ suche folgenden Eintrag
 ```xml
 ... numDensityMapChannels="12" compressionChannels="12" ... combinedValuesChannels="0 4 0;4 5 0;9 3 0">
 ```
-c) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufügen. Diese müssen für für die Anzahl der Winkel ausgerechnet werden. Hier 180/32=5.625
+b) unter Group „GroundAngle“ die Anzahl der Channels und die Winkel hinzufügen. Diese müssen für für die Anzahl der Winkel ausgerechnet werden. Hier 180/32=5.625
 
 ersetze die kompletten Einträge mit folgendem Codeblock
 ```xml
@@ -131,23 +123,15 @@ Starting with an unzipped (**no zip**) map. Be sure that no zipped version of th
 
 1) converting **"maps/data/densityMap_ground.gdm"** with GRLE-converter (you can get this from https://gdn.giants-software.com/downloads.php) into PNG, original from map folder should be deleted. (**Attention:** path could vary depending on your folder structure)
 
-2) copy attached **"terrainShader.xml"** into your maps folder
+~~2) copy attached **"terrainShader.xml"** into your maps folder~~
+
+Step 2 is no longer necessary since patch 1.13.1
 
 3) copy attached **"fieldGround.xml"** into your maps folder
 
 4) editing map.i3D with text editor like notepad++ or anything else
 
-a) edit path of **"terrainShader.xml"**
-
-search for following entry
-```xml
-<File fileId="2" filename="$data/shaders/terrainShader.xml"/>
-```
-change it to
-```xml
-<File fileId="2" filename="terrainShader.xml"/>
-```
-b) search in detaillayer section for „terrainDetail“ and vary the numbers for the channels. There were 2 added, so in total it should be 32.
+a) search in detaillayer section for „terrainDetail“ and vary the numbers for the channels. There were 2 added, so in total it should be 32.
 
 search for
 ```xml
@@ -157,7 +141,7 @@ change this values
 ```xml
 ... numDensityMapChannels="12" compressionChannels="12" ... combinedValuesChannels="0 4 0;4 5 0;9 3 0">
 ```
-c) in section „GroundAngle“ edit the quantity of channels and angles. These should be calculated for 32 angles, here 180/32=5.625
+b) in section „GroundAngle“ edit the quantity of channels and angles. These should be calculated for 32 angles, here 180/32=5.625
 
 replace the complete entry with given codeblock
 ```xml
